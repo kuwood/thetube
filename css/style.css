@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  color: #161616;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav {
+  height: 5em;
+  background-color: #cdcdcd
+}
+
+h1, form {
+  display: inline-block;
+  font-weight: 300;
+}
+
+form {
+  height: 2em;
+  margin-left: 2em;
+  vertical-align: middle;
+}
+
+.navContent {
+  text-align: center;
+}
+
+section {
+  margin-top: 4em;
+}
+ul {
+  padding: 0;
+  max-width: 75em;
+  margin: auto;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  margin: auto;
+  padding: 1em;
+}
+
+a {
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
