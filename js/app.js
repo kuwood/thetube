@@ -5,12 +5,13 @@ $(function() {
     getRequest(searchTerm);
   });
 
-  function getRequest(searchTerm) {
+  function getRequest(searchTerm, pageToken) {
     params = {
       part: 'snippet',
       key: 'AIzaSyDSKdYksK3z3UXl3bwI4dQab3dKluynD5I',
       q: searchTerm,
-      maxResults: 6
+      maxResults: 6,
+      pageToken: pageToken
     };
 
     url = 'https://www.googleapis.com/youtube/v3/search';
@@ -29,7 +30,7 @@ $(function() {
       var title = '<p>' + value.snippet.title.substring(0,40) + '...' + '</p>';
       var channelTitle = value.snippet.channelTitle;
       var channelId = value.snippet.channelId;
-      var channelLink = "<p><a href='https://www.youtube.com/user/" + channelTitle + "'>" + channelTitle + "</a></p>";
+      var channelLink = "<p><a href='https://www.youtube.com/channel/" + channelId + "'>" + channelTitle + "</a></p>";
       ul += "<li>"+ title + videoIdLink + thumbnail + channelLink + "</li>";
     })
     $('#results').html(ul);
